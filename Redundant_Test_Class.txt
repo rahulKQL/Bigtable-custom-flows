@@ -12,3 +12,28 @@ Now this commit is when pull request was closed.
 This will be commited again after PR is closed.
 
 
+------------------------------------------------------------------------------------------
+package com.google.cloud.bigtable.hbase.common;
+
+import org.junit.ClassRule;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+import com.google.cloud.bigtable.hbase.TestIncrement;
+import com.google.cloud.bigtable.hbase.async.TestBasicAsyncOps;
+import com.google.cloud.bigtable.hbase.test_env.SharedTestEnvRule;
+
+@RunWith(Suite.class)
+@SuiteClasses({
+  TestIncrement.class,
+  TestBasicAsyncOps.class
+})
+public class TestCommonConnection {
+
+  @ClassRule
+  public static SharedTestEnvRule sharedTestEnvRule = SharedTestEnvRule.getInstance();
+
+
+}
+
