@@ -11,8 +11,6 @@ Now this commit is when pull request was closed.
 
 This will be commited again after PR is closed.
 
-
-------------------------------------------------------------------------------------------
 package com.google.cloud.bigtable.hbase.common;
 
 import org.junit.ClassRule;
